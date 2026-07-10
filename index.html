@@ -209,21 +209,20 @@
   </section>
 
   <!-- ===================== TESTIMONIALS =====================
-       Ready to publish: uncomment when real client quotes arrive.
-       One <figure> per quote. Do not publish placeholder quotes.
+       One <figure class="quote-card"> per quote. Real, cleared quotes only; never placeholder or invented. -->
 
   <section class="quotes section" id="testimonials">
     <div class="wrap">
       <h2 class="centered">What clients say</h2>
-      <div class="quote-grid">
+      <!-- single-quote state: centred. When a second quote is added, remove the inline style to restore the 2-column grid. -->
+      <div class="quote-grid" style="grid-template-columns: minmax(0, 640px); justify-content: center;">
         <figure class="quote-card">
-          <blockquote>QUOTE TEXT</blockquote>
-          <figcaption>NAME — ROLE, CONTEXT</figcaption>
+          <blockquote>From our very first chemistry conversations, I knew I could trust Keith completely, as his natural, open style made it clear he had the right intent to help me shift my thinking. This foundation of absolute confidentiality empowered me to open myself up as a coachee. His skilled listening and well timed questions beautifully decomplex my thoughts. As a direct result of our time together, I have significantly shifted my ability to think about myself, my habits and ultimately how I drive my own business.</blockquote>
+          <figcaption>Anne-Marie Perkins &middot; Founder, Pottiagogo | Director</figcaption>
         </figure>
       </div>
     </div>
   </section>
-  ======================================================== -->
 
   <!-- ========================= FAQ ========================= -->
   <section class="faq section" id="faq">
