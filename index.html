@@ -20,19 +20,77 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Dr Keith O'Brien — Executive Coaching",
-    "description": "Evidence-based executive coaching from a psychologist and behavioural scientist, for senior leaders navigating change, transition and AI disruption.",
-    "url": "https://drkeithobrien.com",
-    "founder": {
-      "@type": "Person",
-      "name": "Dr Keith O'Brien",
-      "jobTitle": "Executive Coach & Behavioural Scientist",
-      "alumniOf": "Henley Business School"
-    },
-    "areaServed": ["London", "United Kingdom", "Remote"],
-    "serviceType": "Executive Coaching",
-    "priceRange": "££"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://drkeithobrien.com/#keith",
+        "name": "Dr Keith O'Brien",
+        "givenName": "Keith",
+        "familyName": "O'Brien",
+        "jobTitle": "Executive Coach and Behavioural Scientist",
+        "description": "Executive coach, psychologist and behavioural scientist. Coaches senior leaders and business owners through transition, organisational change and AI disruption.",
+        "url": "https://drkeithobrien.com",
+        "email": "keith@adaptableminds.ai",
+        "sameAs": ["https://www.linkedin.com/in/keithmobrien/"],
+        "alumniOf": { "@type": "EducationalOrganization", "name": "Henley Business School" },
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "PhD, psychology of decision-making" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "Professional Certificate in Executive Coaching (PCEC), Henley Business School", "recognizedBy": [{ "@type": "Organization", "name": "International Coaching Federation" }, { "@type": "Organization", "name": "Association for Coaching" }, { "@type": "Organization", "name": "European Mentoring and Coaching Council" }] }
+        ],
+        "knowsAbout": [
+          "executive coaching", "leadership coaching", "behavioural science", "coaching psychology",
+          "solution-focused coaching", "cognitive-behavioural coaching", "organisational change",
+          "career transition", "AI adoption and change management", "leadership presence",
+          "coaching business owners and founders"
+        ],
+        "worksFor": { "@id": "https://drkeithobrien.com/#practice" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://drkeithobrien.com/#practice",
+        "name": "Dr Keith O'Brien Executive Coaching",
+        "description": "Evidence-based executive coaching from a psychologist and behavioural scientist, for senior leaders and business owners navigating change, transition and AI disruption.",
+        "url": "https://drkeithobrien.com",
+        "email": "keith@adaptableminds.ai",
+        "founder": { "@id": "https://drkeithobrien.com/#keith" },
+        "provider": { "@id": "https://drkeithobrien.com/#keith" },
+        "parentOrganization": { "@type": "Organization", "name": "Acla\u00ed Ltd", "identifier": "16629283" },
+        "areaServed": [{ "@type": "City", "name": "London" }, { "@type": "Country", "name": "United Kingdom" }, "Worldwide (virtual)"],
+        "serviceType": "Executive Coaching",
+        "priceRange": "\u00a3550-\u00a32500",
+        "currenciesAccepted": "GBP",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Coaching engagements",
+          "itemListElement": [
+            { "@type": "Offer", "name": "Discovery call", "description": "A free, confidential 30-minute conversation to establish fit. No obligation.", "price": "0", "priceCurrency": "GBP" },
+            { "@type": "Offer", "name": "Transition Sprint", "description": "Three 60-minute sessions for a bounded challenge: a step up, a difficult 360, a career crossroads.", "price": "550", "priceCurrency": "GBP" },
+            { "@type": "Offer", "name": "Coaching Programme", "description": "Six 60-minute sessions. The standard engagement: contracted outcomes, an honest midpoint review, and a proper close.", "price": "1050", "priceCurrency": "GBP" },
+            { "@type": "Offer", "name": "Organisational Leadership Programme", "description": "Six sessions with three-way contracting, midpoint and close-out with the sponsor, and a before-and-after measure.", "price": "2500", "priceCurrency": "GBP" }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://drkeithobrien.com/#website",
+        "url": "https://drkeithobrien.com",
+        "name": "Dr Keith O'Brien",
+        "publisher": { "@id": "https://drkeithobrien.com/#keith" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://drkeithobrien.com/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "What happens on a discovery call?", "acceptedAnswer": { "@type": "Answer", "text": "Thirty minutes, free, confidential, no obligation. You talk about what's prompted the interest; I explain how I work; we both decide whether it's a fit. No hard sell. If I'm not the right coach for you, I'll say so." } },
+          { "@type": "Question", "name": "Are you accredited?", "acceptedAnswer": { "@type": "Answer", "text": "I trained through Henley Business School's Professional Certificate in Executive Coaching, the UK's only triple-accredited programme (recognised by the ICF, AC and EMCC), and I'm completing my ICF accreditation. I coach in line with the ICF Core Competencies and Code of Ethics, with regular supervision." } },
+          { "@type": "Question", "name": "Do you coach virtually?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most coaching is virtual, and the evidence shows outcomes are equivalent to in-person. I meet London clients face-to-face where it helps." } },
+          { "@type": "Question", "name": "What does executive coaching cost?", "acceptedAnswer": { "@type": "Answer", "text": "A six-session programme is \u00a31,050; a three-session Transition Sprint is \u00a3550. Organisational engagements are priced separately. A limited number of foundation places are available at a reduced rate. Ask on the discovery call." } },
+          { "@type": "Question", "name": "How is coaching different from mentoring or consulting?", "acceptedAnswer": { "@type": "Answer", "text": "A consultant brings answers; a mentor brings experience; a coach brings the questions that help you find your own way through. I hold the psychology and behavioural science lightly in the background. It shapes what I notice and ask; it's not a lecture you receive." } },
+          { "@type": "Question", "name": "Is coaching confidential?", "acceptedAnswer": { "@type": "Answer", "text": "Completely. Nothing you say leaves the room, including in organisational engagements, where sponsors receive agreed goals and progress themes, never content." } }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -154,6 +212,7 @@
         <li>Executives navigating organisational change, restructuring, or uncertainty</li>
         <li>Professionals returning to work or making a significant career shift</li>
         <li>Leaders who want to lead differently, with more presence, clarity, or confidence</li>
+        <li>Business owners and founders who have hit the goals they set and want to work out what comes next</li>
         <li>Anyone who senses a gap between where they are and where they want to be</li>
       </ul>
     </div>
@@ -265,6 +324,7 @@
       <p class="cta-sub">Start with a free 30-minute discovery call. No commitment required.</p>
       <p><a class="btn btn-primary btn-large" href="https://calendar.app.google/C1CwyNU5dZQMs4tZA" target="_blank" rel="noopener noreferrer">Book a discovery call</a></p>
       <p class="cta-email">Or email: <a href="mailto:keith@adaptableminds.ai">keith@adaptableminds.ai</a></p>
+      <p class="cta-email">Looking for team training, workshops or organisational change work rather than one-to-one coaching? That runs through <a href="https://adaptableminds.ai" target="_blank" rel="noopener noreferrer">Adaptable Minds</a>.</p>
     </div>
   </section>
 
@@ -272,7 +332,7 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <p>© 2026 Keith O'Brien. All rights reserved. Coaching is delivered through Aclai Ltd (company no. 16629283).</p>
+    <p>© 2026 Keith O'Brien. All rights reserved. Coaching is delivered through Acla&iacute; Ltd (company no. 16629283).</p>
     <a href="https://www.linkedin.com/in/keithmobrien/" target="_blank" rel="noopener noreferrer" aria-label="Keith O'Brien on LinkedIn">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
     </a>
