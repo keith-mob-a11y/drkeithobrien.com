@@ -1,4 +1,4 @@
-# Dr Keith O'Brien — executive coaching
+# Dr Keith O'Brien, executive coaching
 # Conventional search crawlers
 User-agent: *
 Allow: /

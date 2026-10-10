@@ -13,8 +13,9 @@ Push to `main`. GitHub Pages serves the repo root. That's it.
 | Booking link | Search `calendar.app.google` in `index.html` (4 occurrences: nav, hero, final CTA ×2) |
 | **Add a real testimonial** | `index.html` → uncomment the `TESTIMONIALS` section; copy the `<figure class="quote-card">` block per quote. **Never publish placeholder/invented quotes** |
 | Fees | `index.html` → `#fees` section. Keep in sync with the vault Rate_Card |
-| Foundation places count | The `fees-foundation` paragraph; update or remove when the four places are gone |
+| Foundation places count | Five places must change together: the `fees-foundation` paragraph, the FAQ cost answer, the JSON-LD Foundation offer, the JSON-LD cost answer, and `llms.txt`. Update or remove all five when the places are gone. Six sessions at £120 is £720 |
 | ACC awarded | Swap 'completing the Professional Certificate…' / 'completing my ICF accreditation' wording in About + FAQ; consider adding the ACC badge to `.badges` and the credentials strip |
+| Information for Clients PDF | Replace `assets/Information-for-Clients.pdf` (same filename; the discovery-call booking description links to it). Source and builder live in the Dex vault: `Client_Pack/Information_For_Clients_source.html` |
 | Lead magnet PDF | Replace `assets/first-90-days-with-ai.pdf` (keep the filename, or update the link in `#guide`) |
 | New article/insight pages | Create `insights/slug/index.html` reusing the head + nav + footer; add to `sitemap.xml`. Pattern intended for repurposing LinkedIn pillar content |
 | Analytics | Uncomment the Cloudflare beacon in `<head>`, add token |
